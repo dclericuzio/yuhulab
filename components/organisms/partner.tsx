@@ -33,6 +33,8 @@ export default function Partner() {
                                 alt={`client-${index + 1}`}
                                 width={462}
                                 height={462}
+                                priority={index < images.length}
+                                loading="eager"
                                 className="w-[1.3rem] h-[0.4rem] md:w-[1.5rem] md:h-[0.4rem] object-contain animation-effect"
                             />
                         ))}
