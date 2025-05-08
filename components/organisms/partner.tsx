@@ -25,7 +25,7 @@ export default function Partner() {
                     <div className="absolute right-0 top-0 w-[1rem] h-[1.3rem] bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
                 </div>
                 <div className='overflow-hidden'>
-                    <div className="flex scroll-left-animation whitespace-nowrap w-max gap-[0.5rem]">
+                    <div className="flex scroll-left-animation whitespace-nowrap min-w-full w-fit gap-[0.5rem]">
                         {allImages.map((src, index) => (
                             <Image
                                 key={index}
