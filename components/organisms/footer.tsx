@@ -45,7 +45,7 @@ export default function Footer() {
         }
     ]
     return (
-        <div className="bg-[#F5F5F5] skl-container mt-[0.3rem] md:mt-[0.5rem] px-[0.1rem] sm:px-[0.2rem] md:px-[0.7rem] animation-effect">
+        <div className="bg-[#F5F5F5] skl-container px-[0.1rem] sm:px-[0.2rem] md:px-[0.7rem] animation-effect">
             <div className="flex flex-col">
                 <div className="flex py-[0.3rem] md:py-[0.5rem]">
                     <div className="flex flex-col">

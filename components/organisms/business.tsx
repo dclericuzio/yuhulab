@@ -16,15 +16,15 @@ export default function Business() {
         }
     ]
     return (
-        <div className="skl-container mt-[0.3rem] md:mt-[0.5rem] px-[0.1rem] sm:px-[0.2rem] md:px-[0.7rem] animation-effect">
+        <div className="bg-red-500 skl-container py-[0.35rem] md:py-[0.7rem] px-[0.1rem] sm:px-[0.2rem] md:px-[0.7rem] animation-effect">
             <div className='flex flex-col'>
                 <div className="w-full flex justify-between items-center">
-                    <span className='mb-[0.1rem] md:mb-[0.2rem] text-[0.3rem] md:text-[0.5rem] font-medium animation-effect'>Our business</span>
-                    <button className="font-medium text-white text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem] bg-red-500">See More</button>
+                    <span className='text-white mb-[0.1rem] md:mb-[0.2rem] text-[0.3rem] md:text-[0.5rem] font-medium animation-effect'>Our business</span>
+                    <button className="md:block hidden cursor-pointer font-medium text-red-500 bg-white text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">See More</button>
                 </div>
                 <div className="flex md:flex-row flex-col">
                     <div className="flex-col">
-                        <div className="text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D]">PT Sejahtera Karuna Lines (PTSKL) began operations by chartering tug and barge units for the transportation of steam coal in the coal industry. Over time, we have expanded our shipping services to accommodate a wider range of commodities across Java, Kalimantan, Sumatra, and Sulawesi.</div>
+                        <div className="text-[0.15rem] md:text-[0.2rem] text-white">PT Sejahtera Karuna Lines (PTSKL) has dedicated the past 13 years since its establishment to operating and distributing bulk/dry-bulk cargo for a wide range of clients, including leading producers and distributors in the mining, power generation, and mineral trading industries—both in Indonesia and abroad.</div>
                         <div className="flex flex-col md:flex-row w-full my-[0.1rem] md:my-[0.2rem] gap-[0.1rem] md:gap-[0.2rem]">
                             {cardData.map((item, index) => (
                                 <div key={index} className="rounded-xs flex flex-col w-full md:w-1/3 bg-[#F5F5F5] p-[0.1rem] md:p-[0.2rem] animation-effect">
@@ -36,6 +36,7 @@ export default function Business() {
                         </div>
                     </div>
                 </div>
+                <button className="block md:hidden cursor-pointer font-medium text-red-500 bg-white text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">See More</button>
             </div>
         </div>
     );

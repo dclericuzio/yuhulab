@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Interested() {
     return (
-        <div className="skl-container mt-[0.8rem] md:mt-[1.8rem] px-[0.1rem] sm:px-[0.2rem] md:px-[0.7rem] animation-effect">
+        <div className="skl-container py-[0.35rem] md:py-[0.7rem] px-[0.1rem] sm:px-[0.2rem] md:px-[0.7rem] animation-effect">
             <div className='flex flex-col bg-[#F5F5F5] rounded-xs p-[0.1rem] md:p-[0.5rem]'>
                 <div className="w-full flex justify-between items-center">
                     <div className="flex flex-col">
@@ -12,7 +12,7 @@ export default function Interested() {
                     <button className="font-medium text-white bg-red-500 text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">Contact Us</button>
                 </div>
                 <Image
-                    src="/assets/banner-1.jpg"
+                    src="/assets/new-banner-13.jpg"
                     alt="interested"
                     width={4000}
                     height={1696}

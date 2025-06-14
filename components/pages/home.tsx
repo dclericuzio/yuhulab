@@ -1,8 +1,7 @@
 import HeroHome from '@/components/organisms/hero-home';
-import Partner from '@/components/organisms/partner';
 import About from '@/components/organisms/about';
-import Total from '@/components/organisms/total';
 import Business from '@/components/organisms/business';
+import Fleet from '@/components/organisms/fleet';
 import Interested from '@/components/organisms/interested';
 
 export default function Home() {
@@ -10,9 +9,8 @@ export default function Home() {
         <>
             <HeroHome/>
             <About/>
-            <Total/>
             <Business/>
-            <Partner/>
+            <Fleet/>
             <Interested/>
         </>
     );
