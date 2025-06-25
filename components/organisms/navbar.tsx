@@ -24,8 +24,8 @@ export default function Navbar() {
             path: "/" 
         },
         { 
-            name: "Company", 
-            path: "/company" 
+            name: "About Us", 
+            path: "/aboutus" 
         },
         { 
             name: "Business", 
@@ -46,8 +46,8 @@ export default function Navbar() {
             path: 'mailto:marketing@ptsbs.id'
         },
         {
-            name: 'Sampoerna Strategic Square South Tower Lt.22',
-            path: 'https://www.google.com/maps/search/?api=1&query=Sampoerna+Strategic+Square'
+            name: 'AIA Central Lt.33',
+            path: 'https://maps.app.goo.gl/PupLd7eMMdBDbH9R8'
         }
     ]
     return (
@@ -73,7 +73,7 @@ export default function Navbar() {
                                     key={index} 
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className='text-[0.12rem] my-[0.1rem] mx-[0.2rem] pr-[0.3rem] border-r-[0.01rem] border-white last:border-none'
+                                    className='text-[0.12rem] my-[0.1rem] mx-[0.2rem] pr-[0.3rem]'
                                 >
                                     {item.name}
                                 </Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
                     <div className='w-full'>
                         <ul className='flex items-center'>
                             {links.map((link, index) => {
-                                const isActive = pathname === link.path ? 'bg-red-500 text-white' : 'text-black';
+                                const isActive = pathname === link.path ? 'bg-[#d13333] text-white' : 'text-black';
                                 return (
                                     <li key={index} className={`text-[0.16rem] px-[0.7rem] py-[0.2rem] ${isActive}`}>
                                         <Link href={link.path}>{link.name}</Link>
@@ -95,9 +95,9 @@ export default function Navbar() {
                 </div>
                 {/* hamburger */}
                 <div className='flex ml-auto mr-[0.1rem] sm:mr-[0.2rem] md:hidden group z-50 w-[0.25rem] h-[0.2rem] cursor-pointer flex-col justify-between items-center' onClick={() => { setOpen(!open) }}>
-                    <span className={`h-[0.04rem] w-full rounded-lg cursor-pointer animation-effect bg-red-500 ${open ? "rotate-45 translate-y-[0.07rem]" : ""}`} />
+                    <span className={`h-[0.04rem] w-full rounded-lg cursor-pointer animation-effect bg-[#d11919] ${open ? "rotate-45 translate-y-[0.07rem]" : ""}`} />
                     <span className={`h-[0.04rem] rounded-lg cursor-pointer animation-effect bg-black ${open ? "w-0" : "w-full"}`} />
-                    <span className={`h-[0.04rem] w-full rounded-lg cursor-pointer animation-effect bg-red-500 ${open ? "-rotate-45 -translate-y-[0.095rem]" : ""}`} />
+                    <span className={`h-[0.04rem] w-full rounded-lg cursor-pointer animation-effect bg-[#d11919] ${open ? "-rotate-45 -translate-y-[0.095rem]" : ""}`} />
                 </div>
 
                 {/* mobile */}
@@ -111,7 +111,7 @@ export default function Navbar() {
                     <div className='flex flex-col mt-[0.6rem]'>
                         <ul className='flex flex-col items-center'>
                             {links.map((link, index) => {
-                                const isActive = pathname === link.path ? 'bg-red-500 text-white' : 'text-black';
+                                const isActive = pathname === link.path ? 'bg-[#d11919] text-white' : 'text-black';
                                 return (
                                     <li key={index} className={`w-full text-[0.16rem] text-center py-[0.2rem] ${isActive}`}>
                                         <Link href={link.path} onClick={() => setOpen(false)}>{link.name}</Link>

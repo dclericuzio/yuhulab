@@ -1,8 +1,8 @@
-import HeroHome from '@/components/organisms/hero-home';
-import About from '@/components/organisms/about';
-import Business from '@/components/organisms/business';
-import Fleet from '@/components/organisms/fleet';
-import Interested from '@/components/organisms/interested';
+import HeroHome from '@/components/organisms/home/hero-home';
+import About from '@/components/organisms/home/about';
+import Business from '@/components/organisms/home/business';
+import Fleet from '@/components/organisms/home/fleet';
+import Interested from '@/components/organisms/home/interested';
 
 export default function Home() {
     return (

@@ -9,7 +9,7 @@ export default function Interested() {
                         <span className='text-[0.2rem] md:text-[0.5rem] font-medium animation-effect'>Need cargo moved?</span>
                         <span className='text-[0.2rem] md:text-[0.5rem] font-medium animation-effect'>We’re set to sail.</span>
                     </div>
-                    <button className="font-medium text-white bg-red-500 text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">Contact Us</button>
+                    <button className="cursor-pointer font-medium text-white bg-[#d13333] text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">Contact Us</button>
                 </div>
                 <Image
                     src="/assets/new-banner-13.jpg"

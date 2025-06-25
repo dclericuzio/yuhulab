@@ -50,7 +50,7 @@ export default function Hero() {
                         />
                     ))}
                     <div className='font-bold hidden md:block z-10 absolute right-[1rem] top-[2.5rem] text-[0.5rem] animation-effect'>
-                        Your <span className='p-[0.05rem] bg-red-500 text-white'>dependable</span> sea-<span className='italic'>partner</span>
+                        Your <span className='p-[0.05rem] bg-[#d13333] text-white'>dependable</span> sea-<span className='italic'>partner</span>
                     </div>
                     {/* phone overlay & text  */}
                     <div className='block md:hidden z-10 top-[0.5rem] w-full h-full bg-[#00000050] absolute animation-effect'></div>
@@ -59,14 +59,14 @@ export default function Hero() {
                     </div>
                     <div className='w-[0.3rem] md:w-[0.6rem] h-[0.05rem] md:h-[0.1rem] bg-gray-200 rounded-full absolute bottom-[-0.63rem] md:right-0 right-[0.35rem]  md:bottom-[-0.7rem] md:left-1/2 md:-translate-x-1/2 z-10 overflow-hidden'>
                         <div 
-                            className='h-full bg-red-500 rounded-full transition-all duration-[50ms] ease-linear'
+                            className='h-full bg-[#d13333] rounded-full transition-all duration-[50ms] ease-linear'
                             style={{ width: `${progress}%` }}
                         />
                     </div>
                 </div>
             </div>
             <div className='skl-container'>
-                <div className='h-[0.2rem] w-[70%] md:w-[85%] bg-red-500 mt-[0.5rem] md:mt-[1rem] animation-effect'></div>
+                <div className='h-[0.2rem] w-[70%] md:w-[85%] bg-[#d13333] mt-[0.5rem] md:mt-[1rem] animation-effect'></div>
             </div>
         </div>
     );
