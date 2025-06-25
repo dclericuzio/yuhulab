@@ -1,5 +1,3 @@
-import { IoBoatOutline } from "react-icons/io5";
-
 export default function Business() {
     const cardData = [
         {
