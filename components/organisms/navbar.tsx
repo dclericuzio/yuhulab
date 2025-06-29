@@ -42,12 +42,12 @@ export default function Navbar() {
             path: 'tel:+622157950866'
         },
         {
-            name: 'marketing@ptsbs.id',
-            path: 'mailto:marketing@ptsbs.id'
+            name: 'marketing@ptskl.com',
+            path: 'mailto:marketing@ptskl.com'
         },
         {
-            name: 'AIA Central Lt.33',
-            path: 'https://maps.app.goo.gl/PupLd7eMMdBDbH9R8'
+            name: 'Sampoerna Strategic Square South Tower Lt.22',
+            path: 'https://maps.app.goo.gl/qtjAAjtrP3EuDbFGA'
         }
     ]
     return (

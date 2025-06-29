@@ -6,11 +6,11 @@ export default function Hero() {
             <div className="skl-container">
                 <div className="relative w-full h-[2rem] md:h-[5rem] animation-effect">
                     <Image
-                        src='/assets/new-banner-14.jpg'
+                        src='/assets/new-banner-16.jpg'
                         alt="aboutbg"
                         width={4000}
                         height={1300}
-                        className={`absolute top-[0.5rem] md:top-[1rem] left-0 w-full h-[2rem] md:h-[5rem] object-cover animation-effect`}
+                        className={`absolute top-[0.5rem] md:top-[1rem] left-0 w-full h-[2rem] md:h-[5rem] object-fit animation-effect`}
                     />
                     <div className='text-white font-bold hidden md:block z-20 absolute left-1/2 top-1/2 -translate-x-1/2 text-[0.5rem] animation-effect'>
                         About Us

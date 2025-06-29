@@ -13,8 +13,8 @@ export default function Footer() {
             path: "/" 
         },
         { 
-            name: "Company", 
-            path: "/company" 
+            name: "About Us", 
+            path: "/aboutus" 
         },
         { 
             name: "Business", 
@@ -33,15 +33,16 @@ export default function Footer() {
         },
         {
             icon: <IoMdMail className="mt-[0.03rem] text-[#d13333]"/>,
-            name: 'marketing@ptsbs.id',
-            path: 'mailto:marketing@ptsbs.id'
+            name: 'marketing@ptskl.com',
+            path: 'mailto:marketing@ptskl.com'
         },
         {
             icon: <FaMapMarkerAlt className="text-[#d13333]"/>,
-            name: 'AIA Central Lt.33',
-            address: 'Jl. Jend. Sudirman Kav 48A, Karet Semanggi,',
+            place: 'Marketing Office',
+            name: 'Sampoerna Strategic Square South Tower Lt.22',
+            address: 'Jl. Jend. Sudirman No.45 - 46, Karet Semanggi,',
             address2: 'Setiabudi, Jakarta Selatan, DKI Jakarta 12930',
-            path: 'https://maps.app.goo.gl/PupLd7eMMdBDbH9R8'
+            path: 'https://maps.app.goo.gl/qtjAAjtrP3EuDbFGA'
         }
     ]
     return (
@@ -63,6 +64,9 @@ export default function Footer() {
                                         {item.icon}
                                         {item.address ? (
                                             <div className="flex flex-col text-[#4D4D4D]">
+                                                {item.place && (
+                                                    <span>{item.place}:</span>
+                                                )}
                                                 <span>{item.name}</span>
                                                 <span>{item.address}</span>
                                                 <span>{item.address2}</span>

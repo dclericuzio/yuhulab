@@ -35,9 +35,9 @@ export default function VisiMisi() {
             <div className="flex flex-col mb-[0.1rem] md:mb-[1rem] ">    
                 <div className="flex flex-col-reverse md:flex-row items-center gap-[0.2rem]">
                     <div className='flex flex-col'>
-                        <span className='mb-[0.1rem] md:mb-[0.2rem] text-[0.3rem] md:text-[0.5rem] font-medium animation-effect'>Vision</span>
-                        <div className="mb-[0.1rem] md:mb-[0.2rem] text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D]">PT Sejahtera Karunia Lines (PTSKL) was established in 2012 as a subsidiary of PT Samudra Berkat Shipping. We are registered, licensed and in operational within Indonesian maritime freight transportation, empowered with strong commitment to support the growth of national logistics distribution & downstream.</div>
-                        <span className='mb-[0.1rem] md:mb-[0.2rem] text-[0.3rem] md:text-[0.5rem] font-medium animation-effect'>Mission</span>
+                        <span className='mb-[0.1rem] md:mb-[0.2rem] text-[0.3rem] md:text-[0.5rem] font-semibold animation-effect'>Vision</span>
+                        <div className="mb-[0.1rem] md:mb-[0.2rem] text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D]">To become the leading and most trusted domestic maritime transportation company in Indonesia, providing reliable, safe, and sustainable shipping services.</div>
+                        <span className='mb-[0.1rem] md:mb-[0.2rem] text-[0.3rem] md:text-[0.5rem] font-semibold animation-effect'>Mission</span>
                         <div className="mb-[0.1rem] md:mb-[0.2rem] text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D]">To provide dependable logistics services through reliable, professional, and trustworthy operational management, prioritizing Safety (K3) and Environmental, Social, and Governance (ESG) standards.</div>
                         <div className="text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D]">To support government and private maritime programs in enhancing connectivity and downstream processing of resources for vital sectors.</div>
                     </div>
@@ -52,7 +52,7 @@ export default function VisiMisi() {
             </div>
             <div className="flex flex-col justify-center items-center">
                 <div className="text-center mb-[0.1rem] md:mb-[0.2rem]">
-                    <span className='text-[0.3rem] md:text-[0.5rem] font-medium animation-effect'>Company Values</span>
+                    <span className='text-[0.3rem] md:text-[0.5rem] font-semibold animation-effect'>Company Values</span>
                     <div className="h-[0.05rem] md:h-[0.1rem] mx-auto w-[1rem] bg-[#d13333] mt-[-0.15rem] md:mt-0"></div>
                 </div>
                 <span className="text-[0.75rem] md:text-[1.3rem]">TRUST</span>
