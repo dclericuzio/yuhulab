@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Interested() {
     return (
-        <div className="skl-container py-[0.35rem] md:py-[0.7rem] px-[0.1rem] sm:px-[0.2rem] md:px-[0.7rem] animation-effect">
+        <div className="skl-container py-[0.35rem] md:py-[0.7rem] px-[0.1rem] md:px-[0.7rem] animation-effect">
             <div className='flex flex-col bg-[#F5F5F5] rounded-xs p-[0.1rem] md:p-[0.5rem]'>
                 <div className="w-full flex justify-between items-center">
                     <div className="flex flex-col">

@@ -31,15 +31,15 @@ export default function VisiMisi() {
     const values = valueDetails.map(v => v.title);
 
     return (
-        <div className="skl-container py-[0.35rem] md:py-[0.7rem] px-[0.1rem] sm:px-[0.2rem] md:px-[0.7rem] animation-effect">
+        <div className="skl-container py-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect">
             <div className="flex flex-col mb-[0.1rem] md:mb-[1rem] ">    
                 <div className="flex flex-col-reverse md:flex-row items-center gap-[0.2rem]">
                     <div className='flex flex-col'>
                         <span className='mb-[0.1rem] md:mb-[0.2rem] text-[0.3rem] md:text-[0.5rem] font-semibold animation-effect'>Vision</span>
-                        <div className="mb-[0.1rem] md:mb-[0.2rem] text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D]">To become the leading and most trusted domestic maritime transportation company in Indonesia, providing reliable, safe, and sustainable shipping services.</div>
+                        <div className="mb-[0.1rem] md:mb-[0.2rem] text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D] text-justify">To become the leading and most trusted domestic maritime transportation company in Indonesia, providing reliable, safe, and sustainable shipping services.</div>
                         <span className='mb-[0.1rem] md:mb-[0.2rem] text-[0.3rem] md:text-[0.5rem] font-semibold animation-effect'>Mission</span>
-                        <div className="mb-[0.1rem] md:mb-[0.2rem] text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D]">To provide dependable logistics services through reliable, professional, and trustworthy operational management, prioritizing Safety (K3) and Environmental, Social, and Governance (ESG) standards.</div>
-                        <div className="text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D]">To support government and private maritime programs in enhancing connectivity and downstream processing of resources for vital sectors.</div>
+                        <div className="mb-[0.1rem] md:mb-[0.2rem] text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D] text-justify">To provide dependable logistics services through reliable, professional, and trustworthy operational management, prioritizing Safety (K3) and Environmental, Social, and Governance (ESG) standards.</div>
+                        <div className="text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D] text-justify">To support government and private maritime programs in enhancing connectivity and downstream processing of resources for vital sectors.</div>
                     </div>
                     <Image
                         src='/assets/new-banner-4.jpg'

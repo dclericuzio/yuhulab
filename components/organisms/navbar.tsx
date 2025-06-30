@@ -52,7 +52,7 @@ export default function Navbar() {
     ]
     return (
         <nav className='fixed z-50 bg-[#F9F9F9] w-full font-semibold shadow-md'>
-            <div className='skl-container flex items-center my-[0.1rem] md:my-0'>
+            <div className='skl-container flex items-center my-[0.1rem] md:my-0 px-[0.15rem] md:px-0'>
                 {/* logo */}
                 <Link href="/" onClick={() => setOpen(false)}>
                     <Image

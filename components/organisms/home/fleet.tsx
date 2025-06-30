@@ -16,9 +16,9 @@ export default function Fleet() {
 	    'Oil Barge 1000KL'
     ]
     return (
-        <div className="skl-container py-[0.35rem] md:py-[0.7rem] px-[0.1rem] sm:px-[0.2rem] md:px-[0.7rem] animation-effect">
+        <div className="skl-container py-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect">
             <div className='flex md:flex-row flex-col md:items-center md:justify-evenly'>
-                <span className='mb-[0.1rem] md:mb-[0.2rem] text-[0.3rem] md:text-[0.5rem] font-semibold animation-effect'>Our Fleet In Operations</span>
+                <span className='mb-[0.1rem] md:mb-[0.2rem] text-[0.3rem] md:text-[0.5rem] font-semibold animation-effect whitespace-nowrap'>Our Fleet In Operations</span>
                 <div className="flex flex-col">
                     {fleetData.map((item, index) => {
                         return (
