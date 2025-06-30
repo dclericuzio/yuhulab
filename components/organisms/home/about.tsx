@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function About() {
     return (
         <div className="skl-container py-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect">
@@ -7,7 +9,9 @@ export default function About() {
                     <div className="md:w-2/3 flex flex-col">
                         <div className="text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D]">PT Sejahtera Karunia Lines (PT SKL) was established in 2012 as a subsidiary of PT Surya Berkat Semesta. We are registered, licensed and in operational within Indonesian maritime freight transportation, empowered with strong commitment to support the growth of national logistics distribution & downstream.</div>
                         <div className="mt-[0.1rem] md:mt-[0.2rem] text-[0.15rem] md:text-[0.2rem] text-[#4D4D4D]">PT SKL owns and has extensive experiences in Shipment Operations & Ship Management Services for Dry-Bulk, Liquid & special cargo consisting of Mother Vessels (MV), Self-Propelled Barges (SPB), Tug and Barge (T&B), and Oil Barges (OB).</div>
-                        <button className="mx-auto cursor-pointer mt-[0.1rem] md:mt-[0.2rem] font-medium text-white text-[0.15rem] md:text-[0.2rem] mr-auto px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem] bg-[#d13333]">See More</button>
+                        <Link href="/aboutus" className="flex w-fit mx-auto">
+                            <button className="mx-auto cursor-pointer mt-[0.1rem] md:mt-[0.2rem] font-medium text-white text-[0.15rem] md:text-[0.2rem] mr-auto px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem] bg-[#d13333]">See More</button>
+                        </Link>
                     </div>
                 </div>
             </div>

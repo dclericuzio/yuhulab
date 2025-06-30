@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Interested() {
     return (
@@ -9,7 +10,9 @@ export default function Interested() {
                         <span className='text-[0.2rem] md:text-[0.5rem] font-medium animation-effect'>Need cargo moved?</span>
                         <span className='text-[0.2rem] md:text-[0.5rem] font-medium animation-effect'>We’re set to sail.</span>
                     </div>
-                    <button className="cursor-pointer font-medium text-white bg-[#d13333] text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">Contact Us</button>
+                    <Link href="/contact" className="flex">
+                        <button className="cursor-pointer font-medium text-white bg-[#d13333] text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">Contact Us</button>
+                    </Link>
                 </div>
                 <Image
                     src="/assets/new-banner-13.jpg"

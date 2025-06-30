@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Business() {
     const cardData = [
         {
@@ -21,7 +23,9 @@ export default function Business() {
                     <div className="flex-col">
                         <div className="flex flex-row gap-[1.5rem] items-center">
                             <div className="text-[0.15rem] md:text-[0.2rem] text-white text-justify">PT Sejahtera Karuna Lines (PT SKL) has dedicated the past 13 years since its establishment to operate and distribute bulk/dry-bulk cargo for a wide range of clients, including leading producers and distributors in the mining, power generation, and mineral trading industries—both in Indonesia and abroad.</div>
-                            <button className="whitespace-nowrap md:block hidden cursor-pointer font-medium text-[#d13333] bg-white text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">See More</button>
+                            <Link href="/business" className="flex">
+                                <button className="whitespace-nowrap md:block hidden cursor-pointer font-medium text-[#d13333] bg-white text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">See More</button>
+                            </Link>
                         </div>
                         <div className="flex flex-col md:flex-row w-full my-[0.1rem] md:my-[0.2rem] gap-[0.1rem] md:gap-[0.2rem]">
                             {cardData.map((item, index) => (
@@ -34,7 +38,9 @@ export default function Business() {
                         </div>
                     </div>
                 </div>
-                <button className="block md:hidden cursor-pointer font-medium text-[#d13333] bg-white text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">See More</button>
+                <Link href="/business" className="flex w-full">
+                    <button className="w-full block md:hidden cursor-pointer font-medium text-[#d13333] bg-white text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">See More</button>
+                </Link>
             </div>
         </div>
     );
