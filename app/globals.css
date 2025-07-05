@@ -3,7 +3,7 @@
 
 html, body {
     box-sizing: border-box;
-    font-family: var(--font-exo-2), system-ui, sans-serif;
+    font-family: var(--font-noto-sans-grantha), system-ui, sans-serif;
     scroll-behavior: smooth !important;
 }
 

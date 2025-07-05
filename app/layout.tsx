@@ -1,11 +1,13 @@
-import { Exo_2 } from "next/font/google";
+import { Noto_Sans_Grantha } from "next/font/google";
 import ClientWrapper from "@/utils/clientWrapper";
 import Navbar from "@/components/organisms/navbar";
 import "./globals.css";
 import Footer from "@/components/organisms/footer";
+import { HashProvider } from "@/contexts/HashContext";
 
-const exo2 = Exo_2({
-  variable: "--font-exo-2",
+const notoSansGrantha = Noto_Sans_Grantha({
+  weight: "400",
+  variable: "--font-noto-sans-grantha",
   subsets: ["latin"],
 });
 
@@ -20,13 +22,15 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={`${exo2.variable} antialiased`}>
-        <ClientWrapper/>
-        <Navbar/>
-        <main>
-          {children}
-        </main>
-        <Footer/>
+      <body className={`${notoSansGrantha.variable} antialiased`}>
+        <HashProvider>
+          <ClientWrapper/>
+          <Navbar/>
+          <main>
+            {children}
+          </main>
+          <Footer/>
+        </HashProvider>
       </body>
     </html>
   );

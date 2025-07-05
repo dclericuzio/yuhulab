@@ -1,46 +1,34 @@
-import Link from "next/link";
-
 export default function Business() {
     const cardData = [
         {
-            img: './assets/long-toll-red.png',
-            title: 'Long-Toll Transportation',
-            desc: 'Reliable transport of dry-bulk cargo over long distance from Port of Loading (POL) to the Port of Discharge (POD)',
+            title: 'Oil & Gas Carrier',
+            desc: 'test'
         },
         {
-            img: './assets/transhipment-red.png',
-            title: 'Transhipment/Ship-to-Ship',
-            desc: 'Direct transfer of dry-bulk cargo with our barges from Port of Loading (POL) to the Mother Vessel (MV) at anchorage point',
-        }
+            title: 'Chemical Shipment',
+            desc: 'test',
+        },
+        {
+            title: 'Ship Management',
+            desc: 'test'
+        },
     ]
     return (
-        <div className="bg-[#d13333] skl-container py-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect">
-            <div className='flex flex-col'>
-                <div className="w-full flex justify-between items-center">
-                    <span className='text-white mb-[0.1rem] md:mb-[0.2rem] text-[0.3rem] md:text-[0.5rem] font-semibold animation-effect'>Our business</span>
-                </div>
-                <div className="flex md:flex-row flex-col">
-                    <div className="flex-col">
-                        <div className="flex flex-row gap-[1.5rem] items-center">
-                            <div className="text-[0.15rem] md:text-[0.2rem] text-white text-justify">PT Sejahtera Karuna Lines (PT SKL) has dedicated the past 13 years since its establishment to operate and distribute bulk/dry-bulk cargo for a wide range of clients, including leading producers and distributors in the mining, power generation, and mineral trading industries—both in Indonesia and abroad.</div>
-                            <Link href="/business" className="flex">
-                                <button className="whitespace-nowrap md:block hidden cursor-pointer font-medium text-[#d13333] bg-white text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">See More</button>
-                            </Link>
-                        </div>
-                        <div className="flex flex-col md:flex-row w-full my-[0.1rem] md:my-[0.2rem] gap-[0.1rem] md:gap-[0.2rem]">
-                            {cardData.map((item, index) => (
-                                <div key={index} className="rounded-xs flex flex-col w-full md:w-1/2 bg-[#F5F5F5] p-[0.1rem] md:p-[0.2rem] animation-effect">
-                                    <img src={item.img} alt="icon" className="w-[1rem] h-auto ml-[-0.15rem]"/>
-                                    <span className="my-[0.1rem] text-[0.2rem] md:text-[0.25rem] font-semibold">{item.title}</span>
-                                    <div className="text-[0.15rem] md:text-[0.2rem] text-[#5c5c5c] text-justify">{item.desc}</div>
-                                </div>
-                            ))}
-                        </div>
+        <div id='bisniskami' className="bg-[#c3c9ca] skl-container py-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect">
+            <div className='justify-center flex flex-col w-full'>
+                <span className='text-center text-[#172b50] mb-[0.1rem] md:mb-[0.2rem] text-[0.25rem] md:text-[0.35rem] font-bold animation-effect'>Bisnis Kami</span>
+                <div className="flex md:flex-row flex-col md:text-center text-justify justify-center">
+                    <div className="md:w-2/3 flex">
+                        <div className="text-[0.15rem] md:text-[0.15rem] text-[#4D4D4D]">PT RANA beroprasi dengan standar Keselamatan dan Kelayakan pelayaran untuk muatan khusus. Kapal kami didukung oleh awak  yang berpengalaman dan telah memiliki sertifikasi sesuai peraturan pelayaran nasional dengan portfolio dan pengalaman untuk </div>
                     </div>
                 </div>
-                <Link href="/business" className="flex w-full">
-                    <button className="w-full block md:hidden cursor-pointer font-medium text-[#d13333] bg-white text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">See More</button>
-                </Link>
+                <div className="flex flex-col md:flex-row w-full my-[0.1rem] md:my-[0.2rem] gap-[0.1rem] md:gap-[0.2rem]">
+                    {cardData.map((item, index) => (
+                        <div key={index} className="rounded-[0.15rem] flex flex-col w-full md:w-1/2 bg-[#F5F5F5] p-[0.1rem] md:p-[0.2rem] animation-effect">
+                            <span className="my-[0.1rem] text-[0.15rem] md:text-[0.25rem] font-bold text-center">{item.title}</span>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
