@@ -2,10 +2,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, {useEffect, useState} from 'react'
-import { useHash } from '@/contexts/HashContext';
+// import { useHash } from '@/contexts/HashContext';
 
 export default function Navbar() {
-    const { currentHash, setCurrentHash } = useHash();
+    // const { currentHash, setCurrentHash } = useHash();
     const [open, setOpen] = useState(false)
     
     useEffect(() => {

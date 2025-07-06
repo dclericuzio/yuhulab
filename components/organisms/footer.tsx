@@ -4,10 +4,10 @@ import { FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import React from 'react'
-import { useHash } from '@/contexts/HashContext';
+// import { useHash } from '@/contexts/HashContext';
 
 export default function Footer() {
-    const { currentHash, setCurrentHash } = useHash();
+    // const { currentHash, setCurrentHash } = useHash();
 
     // Handle click on navigation links
     // const handleNavClick = (hash: string) => {
