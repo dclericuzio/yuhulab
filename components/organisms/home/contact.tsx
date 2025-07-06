@@ -7,11 +7,11 @@ export default function Contact() {
             <div className='flex flex-col bg-[#F5F5F5] rounded-xs p-[0.1rem] md:p-[0.5rem]'>
                 <div className="w-full flex justify-between items-center">
                     <div className="flex flex-col">
-                        <span className='text-[0.15rem] md:text-[0.25rem] animation-effect'>Need cargo moved?</span>
-                        <span className='text-[0.2rem] md:text-[0.45rem] font-bold animation-effect'>We’re set to sail.</span>
+                        <span className='text-[0.15rem] md:text-[0.25rem] animation-effect'>Butuh kirim kargo?</span>
+                        <span className='text-[0.2rem] md:text-[0.45rem] font-bold animation-effect'>Kami siap berlayar!</span>
                     </div>
                     <Link href="/contact" className="flex">
-                        <button className="cursor-pointer font-medium text-[#ECECEC] bg-[#172b50] text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">Hubungin Kami</button>
+                        <button className="cursor-pointer font-medium text-[#ECECEC] bg-[#25D366] text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">hubungin kami</button>
                     </Link>
                 </div>
                 <Image

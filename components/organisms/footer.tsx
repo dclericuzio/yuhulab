@@ -10,9 +10,9 @@ export default function Footer() {
     const { currentHash, setCurrentHash } = useHash();
 
     // Handle click on navigation links
-    const handleNavClick = (hash: string) => {
-        setCurrentHash(hash);
-    };
+    // const handleNavClick = (hash: string) => {
+    //     setCurrentHash(hash);
+    // };
 
     const links = [
         { 
@@ -40,12 +40,11 @@ export default function Footer() {
         },
         {
             icon: <IoMdMail className="mt-[0.03rem] text-[#ECECEC]"/>,
-            name: 'marketing@ptskl.com',
-            path: 'mailto:marketing@ptskl.com'
+            name: 'admin@ranaputrasolid.co.id',
+            path: 'mailto:admin@ranaputrasolid.co.id'
         },
         {
             icon: <FaMapMarkerAlt className="text-[#ECECEC]"/>,
-            place: 'Marketing Office',
             name: 'Sampoerna Strategic Square South Tower Lt.22',
             address: 'Jl. Jend. Sudirman No.45 - 46, Karet Semanggi,',
             address2: 'Setiabudi, Jakarta Selatan, DKI Jakarta 12930',
@@ -85,11 +84,11 @@ export default function Footer() {
                                 <span className="text-[0.2rem]">Quick Links</span>
                                 <div className="flex flex-col gap-[0.1rem] mt-[0.2rem]">
                                     {links.map((item, index) => {
-                                        const isHomeActive = item.path === "#home" && (currentHash === "" || currentHash === "#home");
-                                        const isOtherActive = item.path !== "#home" && currentHash === item.path;
-                                        const isActive = isHomeActive || isOtherActive ? 'text-[#5fb1c5]' : 'text-[#ECECEC]';
+                                        // const isHomeActive = item.path === "#home" && (currentHash === "" || currentHash === "#home");
+                                        // const isOtherActive = item.path !== "#home" && currentHash === item.path;
+                                        // const isActive = isHomeActive || isOtherActive ? 'text-[#5fb1c5]' : 'text-[#ECECEC]';
                                         return(
-                                        <Link key={index} href={item.path} onClick={() => handleNavClick(item.path)} className={`text-[0.16rem] ${isActive}`}>
+                                        <Link key={index} href={item.path} className={`text-[0.16rem] text-[#ECECEC]`}>
                                             {item.name}
                                         </Link> 
                                     )})}
@@ -99,7 +98,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="text-[0.13rem] md:text-[0.16rem] text-[#ECECEC] text-center py-[0.16rem] border-t-[0.01rem] border-[#ECECEC]">
-                    &copy; 2025 <span className="font-bold">PT. Sejahtera Karunia Lines</span> All rights reserved
+                    &copy; 2025 <span className="font-bold">PT. Rana Putra Solid</span> All rights reserved
                 </div>
             </div>
         </div>

@@ -19,11 +19,11 @@ export default function Navbar() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // Handle click on navigation links
-    const handleNavClick = (hash: string) => {
-        console.log('Nav clicked:', hash);
-        setCurrentHash(hash);
-    };
+    // // Handle click on navigation links
+    // const handleNavClick = (hash: string) => {
+    //     console.log('Nav clicked:', hash);
+    //     setCurrentHash(hash);
+    // };
 
     const links = [
         { 
@@ -62,13 +62,13 @@ export default function Navbar() {
                     <div className='w-full'>
                         <ul className='flex items-center'>
                             {links.map((link, index) => {
-                                const isHomeActive = link.path === "#home" && (currentHash === "" || currentHash === "#home");
-                                const isOtherActive = link.path !== "#home" && currentHash === link.path;
-                                const isActive = isHomeActive || isOtherActive ? 'bg-[#5fb1c5] text-white' : 'text-[#ECECEC]';
-                                console.log(`Link ${link.name}: currentHash=${currentHash}, link.path=${link.path}, isActive=${isHomeActive || isOtherActive}`);
+                                // const isHomeActive = link.path === "#home" && (currentHash === "" || currentHash === "#home");
+                                // const isOtherActive = link.path !== "#home" && currentHash === link.path;
+                                // const isActive = isHomeActive || isOtherActive ? 'bg-[#5fb1c5] text-white' : 'text-[#ECECEC]';
+                                // console.log(`Link ${link.name}: currentHash=${currentHash}, link.path=${link.path}, isActive=${isHomeActive || isOtherActive}`);
                                 return (
-                                    <li key={index} className={`tracking-widest text-[0.12rem] px-[0.7rem] py-[0.2rem] ${isActive}`}>
-                                        <Link href={link.path} onClick={() => handleNavClick(link.path)}>{link.name}</Link>
+                                    <li key={index} className={`text-[#ECECEC] tracking-widest text-[0.12rem] px-[0.7rem] py-[0.2rem]`}>
+                                        <Link href={link.path}>{link.name}</Link>
                                     </li>
                                 )
                             })}
@@ -93,12 +93,12 @@ export default function Navbar() {
                     <div className='flex flex-col mt-[0.6rem]'>
                         <ul className='flex flex-col items-center'>
                             {links.map((link, index) => {
-                                const isHomeActive = link.path === "#home" && (currentHash === "" || currentHash === "#home");
-                                const isOtherActive = link.path !== "#home" && currentHash === link.path;
-                                const isActive = isHomeActive || isOtherActive ? 'bg-[#5fb1c5] text-[#ECECEC]' : 'text-black';
+                                // const isHomeActive = link.path === "#home" && (currentHash === "" || currentHash === "#home");
+                                // const isOtherActive = link.path !== "#home" && currentHash === link.path;
+                                // const isActive = isHomeActive || isOtherActive ? 'bg-[#5fb1c5] text-[#ECECEC]' : 'text-black';
                                 return (
-                                    <li key={index} className={`w-full text-[0.16rem] text-center py-[0.2rem] ${isActive}`}>
-                                        <Link href={link.path} onClick={() => { setOpen(false); handleNavClick(link.path); }}>{link.name}</Link>
+                                    <li key={index} className={`w-full text-[0.16rem] text-center py-[0.2rem] text-[#ECECEC]`}>
+                                        <Link href={link.path}>{link.name}</Link>
                                     </li>
                                 )
                             })}
