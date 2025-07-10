@@ -4,32 +4,27 @@ import { FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import React from 'react'
-// import { useHash } from '@/contexts/HashContext';
+import { usePathname } from 'next/navigation'
 
 export default function Footer() {
-    // const { currentHash, setCurrentHash } = useHash();
-
-    // Handle click on navigation links
-    // const handleNavClick = (hash: string) => {
-    //     setCurrentHash(hash);
-    // };
+    const pathname = usePathname();
 
     const links = [
         { 
             name: "Beranda", 
-            path: "#beranda" 
+            path: "/" 
         },
         { 
             name: "Tentang Kami", 
-            path: "#tentangkami" 
+            path: "/tentang-kami" 
         },
         { 
             name: "Bisnis Kami", 
-            path: "#bisniskami" 
+            path: "/bisnis-kami" 
         },
         { 
             name: "Kontak", 
-            path: "#kontak"
+            path: "/kontak"
         }
     ]
     const footerData = [
@@ -84,11 +79,9 @@ export default function Footer() {
                                 <span className="text-[0.2rem]">Quick Links</span>
                                 <div className="flex flex-col gap-[0.1rem] mt-[0.2rem]">
                                     {links.map((item, index) => {
-                                        // const isHomeActive = item.path === "#home" && (currentHash === "" || currentHash === "#home");
-                                        // const isOtherActive = item.path !== "#home" && currentHash === item.path;
-                                        // const isActive = isHomeActive || isOtherActive ? 'text-[#5fb1c5]' : 'text-[#ECECEC]';
+                                        const isActive = pathname === item.path
                                         return(
-                                        <Link key={index} href={item.path} className={`text-[0.16rem] text-[#ECECEC]`}>
+                                        <Link key={index} href={item.path} className={`text-[0.16rem] ${isActive ? 'text-[#5fb1c5]' : 'text-[#ECECEC]'}`}>
                                             {item.name}
                                         </Link> 
                                     )})}

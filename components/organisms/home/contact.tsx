@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "../button";
 
 export default function Contact() {
     return (
@@ -10,9 +11,11 @@ export default function Contact() {
                         <span className='text-[0.15rem] md:text-[0.25rem] animation-effect'>Butuh kirim kargo?</span>
                         <span className='text-[0.2rem] md:text-[0.45rem] font-bold animation-effect'>Kami siap berlayar!</span>
                     </div>
-                    <Link href="/contact" className="flex">
-                        <button className="cursor-pointer font-medium text-[#ECECEC] bg-[#25D366] text-[0.15rem] md:text-[0.2rem] px-[0.2rem] md:px-[0.3rem] py-[0.08rem] md:py-[0.15rem]">hubungin kami</button>
-                    </Link>
+                    <Button 
+                        title="Contact Us"
+                        custom="bg-[#25D366]"
+                        href="tel:+622157950866"
+                    />
                 </div>
                 <Image
                     src="/assets/picture-1.png"
