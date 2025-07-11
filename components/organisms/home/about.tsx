@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../button";
+import Title from "../title";
 
 const aboutImages = [
     {
@@ -38,7 +39,7 @@ export default function About() {
                         />
                     ))}
                 </div>
-                <span className='text-center mb-[0.1rem] md:mb-[0.2rem] text-[0.25rem] md:text-[0.35rem] font-bold animation-effect'>Tentang Kami</span>
+                <Title title="Tentang Kami" custom="text-center"/>
                 <div className="flex md:flex-row flex-col md:text-center text-justify justify-center mb-[0.1rem] md:mb-[0.2rem]">
                     <div className="md:w-2/3 flex flex-col gap-[0.1rem]">
                         <div className="text-[0.15rem] md:text-[0.15rem] text-[#4D4D4D]">PT Rana Putra Solid (PT RANA) adalah perusahaan yang bergerak di bidang pelayaran angkutan laut khusus, berdiri pada tahun 2024 dengan semangat untuk turut serta mendukung pertumbuhan logistik dan distribusi nasional. Kami hadir dengan tekad kuat, integritas tinggi, dan komitmen untuk memberikan layanan terbaik kepada para mitra bisnis kami.</div>

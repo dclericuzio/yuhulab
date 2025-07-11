@@ -1,24 +1,22 @@
 import Button from "../button";
+import Title from "../title";
 
 export default function Business() {
     const cardData = [
         {
-            title: 'Oil & Gas Carrier',
-            desc: 'test'
+            title: 'Oil & Gas Carrier'
         },
         {
-            title: 'Chemical Shipment',
-            desc: 'test',
+            title: 'Chemical Shipment'
         },
         {
-            title: 'Ship Management',
-            desc: 'test'
+            title: 'Ship Management'
         },
     ]
     return (
         <div id='bisniskami' className="bg-[#c3c9ca] skl-container py-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect">
             <div className='justify-center flex flex-col w-full'>
-                <span className='text-center text-[#172b50] mb-[0.1rem] md:mb-[0.2rem] text-[0.25rem] md:text-[0.35rem] font-bold animation-effect'>Bisnis Kami</span>
+                <Title title="Bisnis Kami" custom="text-[#172b50] text-center"/>
                 <div className="flex md:flex-row flex-col md:text-center text-justify justify-center">
                     <div className="md:w-2/3 flex">
                         <div className="text-[0.15rem] md:text-[0.15rem] text-[#4D4D4D]">PT RANA beroprasi dengan standar Keselamatan dan Kelayakan pelayaran untuk muatan khusus. Kapal kami didukung oleh awak  yang berpengalaman dan telah memiliki sertifikasi sesuai peraturan pelayaran nasional dengan portfolio dan pengalaman untuk </div>

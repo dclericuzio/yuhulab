@@ -11,9 +11,9 @@ export default function Contact() {
                         <span className='text-[0.2rem] md:text-[0.45rem] font-bold animation-effect'>Kami siap berlayar!</span>
                     </div>
                     <Button 
-                        title="Contact Us"
+                        title="Kontak Kami"
                         custom="bg-[#25D366]"
-                        href="tel:+622157950866"
+                        href="/kontak"
                     />
                 </div>
                 <Image
