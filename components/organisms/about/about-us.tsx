@@ -26,33 +26,6 @@ export default function AboutUs() {
         }
     ]
 
-    const Team = [
-        {
-            name: 'Capt. Fauzan',
-            title: 'Direktur Utama'
-        },
-        {
-            name: 'Irman Nurzaman',
-            title: 'Technical & Operations'
-        },
-        {
-            name: 'Meutiah Octaviany',
-            title: 'Quality, Health, Safety & Environment (QHSE)'
-        },
-        {
-            name: 'Dennis Teja',
-            title: 'Marketing'
-        },
-        {
-            name: 'Dante Clericuzio',
-            title: 'Information Technology & Technology Development'
-        },
-        {
-            name: 'Annisa',
-            title: 'Human Resources & Administration'
-        }
-    ]
-
     const licenseData = [
         '/assets/license-1.png',
         '/assets/license-2.png',
@@ -149,15 +122,6 @@ export default function AboutUs() {
                     <div className="flex flex-col text-justify mb-[0.3rem] md:mb-[0.7rem]">
                         <span className="text-[0.15rem] md:text-[0.2rem] mb-[0.1rem] md:mb-[0.2rem]">Struktur Perusahaan</span>
                         <div className="w-full">
-                            {/* {Team.map((item, index) => (
-                                <div 
-                                    key={index}
-                                    className={`flex flex-col border-l-[0.1rem] border-[#172b50] flex-1 pl-[0.25rem]`}
-                                >
-                                    <span className="text-[0.15rem] md:text-[0.2rem] font-bold">{item.name}</span>
-                                    <span className="text-[0.1rem] md:text-[0.15rem] text-[#4D4D4D]">{item.title}</span>
-                                </div>
-                            ))} */}
                             <Image
                                 src="/assets/struktur.png"
                                 alt="Struktur"
