@@ -138,18 +138,18 @@ export default function AboutUs() {
                         </div>
                         <div className="w-1/3 flex justify-center">
                             <Image
-                                src="/placeholder.svg"
+                                src="/assets/director.jpg"
                                 alt="Direktur Utama"
-                                width={400}
-                                height={500}
-                                className="w-full md:w-[60%] h-auto my-[0.2rem] md:my-0"
+                                width={788}
+                                height={1240}
+                                className="w-full md:w-[70%] h-auto my-[0.2rem] md:my-0"
                             />
                         </div>
                     </div>
                     <div className="flex flex-col text-justify mb-[0.3rem] md:mb-[0.7rem]">
-                        <span className="text-[0.15rem] md:text-[0.2rem] mb-[0.1rem] md:mb-[0.2rem]">Tim Manajemen</span>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-[0.2rem] md:gap-[0.5rem] w-full">
-                            {Team.map((item, index) => (
+                        <span className="text-[0.15rem] md:text-[0.2rem] mb-[0.1rem] md:mb-[0.2rem]">Struktur Perusahaan</span>
+                        <div className="w-full">
+                            {/* {Team.map((item, index) => (
                                 <div 
                                     key={index}
                                     className={`flex flex-col border-l-[0.1rem] border-[#172b50] flex-1 pl-[0.25rem]`}
@@ -157,7 +157,14 @@ export default function AboutUs() {
                                     <span className="text-[0.15rem] md:text-[0.2rem] font-bold">{item.name}</span>
                                     <span className="text-[0.1rem] md:text-[0.15rem] text-[#4D4D4D]">{item.title}</span>
                                 </div>
-                            ))}
+                            ))} */}
+                            <Image
+                                src="/assets/struktur.png"
+                                alt="Struktur"
+                                width={788}
+                                height={1240}
+                                className="w-full h-auto my-[0.2rem] md:my-0"
+                            />
                         </div>
                     </div>
                 </div>
