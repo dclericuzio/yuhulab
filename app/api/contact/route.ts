@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs'; 
+
 export async function POST(req: NextRequest) {
   try {
     const { name, email, message } = await req.json();
@@ -30,7 +33,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true });
   } catch (err) {
-    console.error('❌ Email send failed:', err);
-    return NextResponse.json({ error: 'Failedaaa to send email' }, { status: 500 });
+    console.error('❌ Email send failed:', JSON.stringify(err, null, 2));
+    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
   }
 }
