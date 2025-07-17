@@ -1,4 +1,4 @@
-'use client';
+"use client"
 import Banner from "../banner";
 
 export default function Hero() {
@@ -6,9 +6,9 @@ export default function Hero() {
     return (
         <Banner 
             imageUrl=""
-            videoUrl="/assets/video-2-compressed.mp4"
-            title="Empowering"
-            desc="Energy Logistics"
+            videoUrl="/assets/video-1-compressed.mp4"
+            title="Tentang Kami"
+            desc="PT Rana Putra Solid"
         />
     );
 }

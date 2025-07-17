@@ -2,13 +2,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, {useEffect, useState} from 'react'
-// import { useHash } from '@/contexts/HashContext';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
-    // const { currentHash, setCurrentHash } = useHash();
     const [open, setOpen] = useState(false)
+    const [mounted, setMounted] = useState(false)
     
     useEffect(() => {
+        setMounted(true)
         const handleResize = () => {
             if (window.innerWidth >= 768) {
                 setOpen(false);
@@ -19,30 +20,64 @@ export default function Navbar() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // // Handle click on navigation links
-    // const handleNavClick = (hash: string) => {
-    //     console.log('Nav clicked:', hash);
-    //     setCurrentHash(hash);
-    // };
+    const pathname = usePathname();
 
     const links = [
         { 
             name: "Beranda", 
-            path: "#beranda" 
+            path: "/" 
         },
         { 
             name: "Tentang Kami", 
-            path: "#tentangkami" 
+            path: "/tentang-kami" 
         },
         { 
             name: "Bisnis Kami", 
-            path: "#bisniskami" 
+            path: "/bisnis-kami" 
         },
         { 
             name: "Kontak", 
-            path: "#kontak"
+            path: "/kontak"
         }
     ]
+
+    // Don't render until mounted to prevent hydration mismatch
+    if (!mounted) {
+        return (
+            <nav className='fixed z-50 bg-[#172b50] w-full font-semibold shadow-md'>
+                <div className='skl-container flex items-center my-[0.1rem] md:my-0 px-[0.15rem] md:px-0'>
+                    <Link href="/">
+                        <Image
+                            src="/assets/logo.png"
+                            alt="Logo"
+                            width={320}
+                            height={60}
+                            className="animation-effect ml-[0.1rem] sm:ml-[0.2rem] md:ml-[0.7rem] w-[0.8rem] md:w-[1rem] md:h-[0.4rem]"
+                        />
+                    </Link>
+                    <div className='hidden md:flex flex-col ml-auto'>
+                        <div className='w-full'>
+                            <ul className='flex items-center'>
+                                {links.map((link, index) => (
+                                    <li
+                                        key={index}
+                                        className='text-[#ECECEC] tracking-widest text-[0.12rem] px-[0.7rem] py-[0.2rem]'
+                                    >
+                                        <Link href={link.path}>{link.name}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='flex ml-auto mr-[0.1rem] sm:mr-[0.2rem] md:hidden group z-50 w-[0.25rem] h-[0.2rem] cursor-pointer flex-col justify-between items-center'>
+                        <span className='h-[0.04rem] w-full rounded-lg cursor-pointer animation-effect bg-[#5fb1c5]' />
+                        <span className='h-[0.04rem] rounded-lg cursor-pointer animation-effect bg-[#ECECEC] w-full' />
+                        <span className='h-[0.04rem] w-full rounded-lg cursor-pointer animation-effect bg-[#5fb1c5]' />
+                    </div>
+                </div>
+            </nav>
+        );
+    }
 
     return (
         <nav className='fixed z-50 bg-[#172b50] w-full font-semibold shadow-md'>
@@ -62,12 +97,12 @@ export default function Navbar() {
                     <div className='w-full'>
                         <ul className='flex items-center'>
                             {links.map((link, index) => {
-                                // const isHomeActive = link.path === "#home" && (currentHash === "" || currentHash === "#home");
-                                // const isOtherActive = link.path !== "#home" && currentHash === link.path;
-                                // const isActive = isHomeActive || isOtherActive ? 'bg-[#5fb1c5] text-white' : 'text-[#ECECEC]';
-                                // console.log(`Link ${link.name}: currentHash=${currentHash}, link.path=${link.path}, isActive=${isHomeActive || isOtherActive}`);
+                                const isActive = pathname === link.path;
                                 return (
-                                    <li key={index} className={`text-[#ECECEC] tracking-widest text-[0.12rem] px-[0.7rem] py-[0.2rem]`}>
+                                    <li
+                                        key={index}
+                                        className={`text-[#ECECEC] tracking-widest text-[0.12rem] px-[0.7rem] py-[0.2rem] ${isActive ? 'bg-[#5fb1c5]' : ''}`}
+                                    >
                                         <Link href={link.path}>{link.name}</Link>
                                     </li>
                                 )
@@ -93,12 +128,10 @@ export default function Navbar() {
                     <div className='flex flex-col mt-[0.6rem]'>
                         <ul className='flex flex-col items-center'>
                             {links.map((link, index) => {
-                                // const isHomeActive = link.path === "#home" && (currentHash === "" || currentHash === "#home");
-                                // const isOtherActive = link.path !== "#home" && currentHash === link.path;
-                                // const isActive = isHomeActive || isOtherActive ? 'bg-[#5fb1c5] text-[#ECECEC]' : 'text-black';
+                                const isActive = pathname === link.path;
                                 return (
-                                    <li key={index} className={`w-full text-[0.16rem] text-center py-[0.2rem] text-[#ECECEC]`}>
-                                        <Link href={link.path}>{link.name}</Link>
+                                    <li key={index} className={`w-full text-[0.16rem] text-center py-[0.2rem] ${isActive ? 'text-[#ECECEC] bg-[#5fb1c5]' :''}`}>
+                                        <Link href={link.path} onClick={() => setOpen(false)}>{link.name}</Link>
                                     </li>
                                 )
                             })}

@@ -2,8 +2,10 @@ import { Noto_Sans_Grantha } from "next/font/google";
 import ClientWrapper from "@/utils/clientWrapper";
 import Navbar from "@/components/organisms/navbar";
 import "./globals.css";
+import 'leaflet/dist/leaflet.css'
 import Footer from "@/components/organisms/footer";
-import { HashProvider } from "@/contexts/HashContext";
+import StatusMessageDisplay from "@/components/StatusMessageDisplay";
+import { StatusMessageProvider } from "@/components/StatusMessageContext";
 
 const notoSansGrantha = Noto_Sans_Grantha({
   weight: "400",
@@ -23,15 +25,17 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${notoSansGrantha.variable} antialiased`}>
-        <HashProvider>
-          <ClientWrapper/>
+        <ClientWrapper/>
+        <StatusMessageProvider>
           <Navbar/>
+          <StatusMessageDisplay/>
           <main>
             {children}
           </main>
           <Footer/>
-        </HashProvider>
+        </StatusMessageProvider>
       </body>
     </html>
   );
 }
+
