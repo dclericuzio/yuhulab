@@ -1,14 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs'; 
+
 export async function POST(req: NextRequest) {
   try {
     const { name, email, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      secure: Boolean(process.env.SMTP_SECURE),
+      port: parseInt(process.env.SMTP_PORT || '465', 10),
+      secure: process.env.SMTP_SECURE === 'true',
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -30,7 +33,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true });
   } catch (err) {
-    console.error('❌ Email send failed:', err);
-    return NextResponse.json({ error: 'Failedaaa to send email' }, { status: 500 });
+    console.error('❌ Email send failed:', JSON.stringify(err, null, 2));
+    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
   }
 }
