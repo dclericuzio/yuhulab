@@ -56,7 +56,7 @@ export default function Footer() {
                             alt="Logo"
                             width={320}
                             height={60}
-                            className="animation-effect w-[1rem] md:w-[2rem]"
+                            className="animation-effect w-[1rem] md:w-[2rem] h-auto"
                         />
                         <div className="flex md:flex-row flex-col gap-[0.4rem]">
                             <div className="flex flex-col gap-[0.1rem] mt-[0.4rem]">
