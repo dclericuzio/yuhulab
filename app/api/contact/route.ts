@@ -6,7 +6,7 @@ export const runtime = 'nodejs';
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, company, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
       html: `
         <p><strong>Nama:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Perusahaan:</strong> ${company}</p>
         <p><strong>Pesan:</strong></p>
         <p>${message}</p>
       `,
