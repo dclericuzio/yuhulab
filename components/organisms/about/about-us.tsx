@@ -120,6 +120,17 @@ export default function AboutUs() {
                         </div>
                     </div>
                     <div className="flex flex-col text-justify mb-[0.3rem] md:mb-[0.7rem]">
+                        <span className="text-[0.15rem] md:text-[0.2rem] mb-[0.1rem] md:mb-[0.2rem]">Profil Direktur</span>
+                        <div className="flex md:flex-row flex-col md:text-left text-justify mb-[0.1rem] md:mb-[0.2rem]">
+                            <div className="flex flex-col gap-[0.1rem] text-justify">
+                                <div className="text-[0.15rem] md:text-[0.15rem] text-[#4D4D4D]">Warga negara Indonesia, 51 tahun. Beliau meraih gelar Master Nautical dari Sekolah Tinggi Ilmu Pelayaran (STIP) dan kini mendirikan dan menjabat sebagai Direktur Utama & CEO PT Rana Putra Solid (2024).</div>
+                                <div className="text-[0.15rem] md:text-[0.15rem] text-[#4D4D4D]">Mengawali karir sebagai perwira muda di Perusahaan Pelayaran Mitsui.O.S.K Lines, Ltd. Japan dari tahun 1996 Hingga 2006 di berbagai tipe Kapal dari Container, Bulk carier, Oil tanker dan LNG carier, hingga mencapai posisi tertinggi sebagai Nahkoda.</div>
+                                <div className="text-[0.15rem] md:text-[0.15rem] text-[#4D4D4D]">Selama berkarir di Perusahaan pelayaran beliau banyak menghandle kapal special GAS baik tipe membrane maupun tipe moss baik itu tipe A ataupun tipe C, seperti LNG Eka Putra, LNG Dwi Putra, LNG Triputra, LNG Suria Aki, LNG Maleo, LNG Hyundai Utopia, LNG Seri Bijaksana, LNG Seri Anggun, Gas Log Seatle, Hayang Seo 2 dan Gas Komodo.</div>
+                                <div className="text-[0.15rem] md:text-[0.15rem] text-[#4D4D4D]">Sebelum menjadi Direktur Utama, Beliau pernah menjabat sebagai General Superintendent di PT Freeport Indonesia PTFI (2010-2012), Senior Manager di PT MBSS Indika Group (2013-2015), Senior Marine Coordinator di PT Donggi Senoro LNG (2015-2019) Head QHSE and Operation di PT Wintermar (2019-2021), Direktur Operasi PT Pelayaran Bahtera Adiguna PLN (2021-2022) dan  Direktur Utama PT Pelayaran  Bahtera Adiguna PLN (2022-2023), Fleet Direktur (2023) PT Baruna Raya Logistik, Direktur Business Development di HUMPUSS Group (2024).</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex flex-col text-justify mb-[0.3rem] md:mb-[0.7rem]">
                         <span className="text-[0.15rem] md:text-[0.2rem] mb-[0.1rem] md:mb-[0.2rem]">Struktur Perusahaan</span>
                         <div className="w-full">
                             <Image

@@ -8,7 +8,7 @@ export default function GetInTouch() {
     const text = 'text-[0.12rem] md:text-[0.15rem] text-[#4D4D4D]'
     const formColumn = 'w-full rounded-[0.15rem] bg-[#F5F5F5] p-[0.1rem] md:p-[0.2rem] text-[0.15rem] font-semibold'
 
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [formData, setFormData] = useState({ name: '', email: '', company: '', message: '' });
   const { status, setStatus: setGlobalStatus } = useStatusMessage();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -27,7 +27,7 @@ export default function GetInTouch() {
 
     if (res.ok) {
       setGlobalStatus('Sent');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', company: '', message: '' });
     } else {
       setGlobalStatus('Failed to send.');
     }
@@ -86,6 +86,17 @@ export default function GetInTouch() {
                                 placeholder="Email" 
                                 required 
                                 type="email" 
+                                className={formColumn}
+                            />
+                        </div>
+                        <div className='flex flex-col'>
+                            <span className={`${text} mb-[0.1rem]`}>Perusahaan :</span>
+                            <input 
+                                name="email" 
+                                value={formData.company} 
+                                onChange={handleChange} 
+                                placeholder="Perusahaan" 
+                                required 
                                 className={formColumn}
                             />
                         </div>
