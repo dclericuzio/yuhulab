@@ -105,16 +105,16 @@ export default function AboutUs() {
             </motion.div>
 
             {/* Management */}
-            <motion.div 
-                className='flex flex-col md:flex-row w-full items-center'
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}    
-                viewport={{ once: true, amount: 0.3 }}
-            >
+            <div className='flex flex-col md:flex-row w-full items-center'>
                 <div className="flex flex-col">
                     <Title title="Manajemen Perusahaan" custom="text-left"/>
-                    <div className="flex md:flex-row flex-col-reverse items-center  mb-[0.3rem] md:mb-[0.7rem]">
+                    <motion.div 
+                        className="flex md:flex-row flex-col-reverse items-center  mb-[0.3rem] md:mb-[0.7rem]"
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}    
+                        viewport={{ once: true, amount: 0.3 }}
+                    >
                         <div className="md:w-2/3 flex flex-col">
                             <div className="flex flex-col text-justify mb-[0.1rem] md:mb-[0.2rem]">
                                 <span className="text-[0.15rem] md:text-[0.2rem] mb-[0.1rem] md:mb-[0.2rem]">Pesan dari Direktur</span>
@@ -138,8 +138,14 @@ export default function AboutUs() {
                                 className="w-full md:w-[70%] h-auto my-[0.2rem] md:my-0"
                             />
                         </div>
-                    </div>
-                    <div className="flex flex-col text-justify mb-[0.3rem] md:mb-[0.7rem]">
+                    </motion.div>
+                    <motion.div 
+                        className="flex flex-col text-justify mb-[0.3rem] md:mb-[0.7rem]"
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}    
+                        viewport={{ once: true, amount: 0.3 }}
+                    >
                         <span className="text-[0.15rem] md:text-[0.2rem] mb-[0.1rem] md:mb-[0.2rem]">Profil Direktur</span>
                         <div className="flex md:flex-row flex-col md:text-left text-justify mb-[0.1rem] md:mb-[0.2rem]">
                             <div className="flex flex-col gap-[0.1rem] text-justify">
@@ -149,8 +155,14 @@ export default function AboutUs() {
                                 <div className="text-[0.15rem] md:text-[0.15rem] text-[#4D4D4D]">Sebelum menjadi Direktur Utama, Beliau pernah menjabat sebagai General Superintendent di PT Freeport Indonesia PTFI (2010-2012), Senior Manager di PT MBSS Indika Group (2013-2015), Senior Marine Coordinator di PT Donggi Senoro LNG (2015-2019) Head QHSE and Operation di PT Wintermar (2019-2021), Direktur Operasi PT Pelayaran Bahtera Adiguna PLN (2021-2022) dan  Direktur Utama PT Pelayaran  Bahtera Adiguna PLN (2022-2023), Fleet Direktur (2023) PT Baruna Raya Logistik, Direktur Business Development di HUMPUSS Group (2024).</div>
                             </div>
                         </div>
-                    </div>
-                    <div className="flex flex-col text-justify mb-[0.3rem] md:mb-[0.7rem]">
+                    </motion.div>
+                    <motion.div 
+                        className="flex flex-col text-justify mb-[0.3rem] md:mb-[0.7rem]"
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}    
+                        viewport={{ once: true, amount: 0.3 }}
+                    >
                         <span className="text-[0.15rem] md:text-[0.2rem] mb-[0.1rem] md:mb-[0.2rem]">Struktur Perusahaan</span>
                         <div className="w-full">
                             <Image
@@ -161,9 +173,9 @@ export default function AboutUs() {
                                 className="w-full h-auto my-[0.2rem] md:my-0"
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
-            </motion.div>
+            </div>
 
             {/* License */}
             <motion.div 
