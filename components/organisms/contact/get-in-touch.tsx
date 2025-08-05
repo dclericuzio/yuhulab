@@ -1,4 +1,5 @@
 'use client';
+import { motion } from "framer-motion";
 import { useState } from 'react';
 import LeafletMap from '../LeafletMap'
 import Title from "../title";
@@ -36,7 +37,13 @@ export default function GetInTouch() {
     return (
         <div className="skl-container pb-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect relative">
             {/* profil */}
-            <div className='flex flex-col md:flex-row w-full gap-[1rem] md:gap-[1rem] mb-[0.1rem] md:mb-[0.7rem]'>
+            <motion.div 
+                className='flex flex-col md:flex-row w-full gap-[1rem] md:gap-[1rem] mb-[0.1rem] md:mb-[0.7rem]'
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}    
+                viewport={{ once: true, amount: 0.3 }}
+            >
                 <div className="flex flex-col md:w-1/2">
                     <Title title="Informasi Kontak" custom=""/>
                     <div className="flex md:flex-row flex-col md:text-left text-justify mb-[0.1rem] md:mb-[0.2rem]">
@@ -121,7 +128,7 @@ export default function GetInTouch() {
                         </button>
                     </form>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

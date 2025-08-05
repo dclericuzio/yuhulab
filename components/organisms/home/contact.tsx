@@ -1,9 +1,18 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Button from "../button";
 
 export default function Contact() {
     return (
-        <div id='kontak' className="skl-container py-[0.35rem] md:py-[0.7rem] px-[0.1rem] md:px-[0.7rem] animation-effect">
+        <motion.div 
+            id='kontak' 
+            className="skl-container py-[0.35rem] md:py-[0.7rem] px-[0.1rem] md:px-[0.7rem] animation-effect"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}    
+            viewport={{ once: true, amount: 0.3 }}
+        >
             <div className='flex flex-col bg-[#F5F5F5] rounded-xs p-[0.1rem] md:p-[0.5rem]'>
                 <div className="w-full flex justify-between items-center">
                     <div className="flex flex-col">
@@ -24,6 +33,6 @@ export default function Contact() {
                     className="w-full h-[1.5rem] md:h-[4rem] object-cover rounded-xs mt-[0.3rem] md:mt-[0.5rem] animation-effect"
                 />
             </div>
-        </div>
+        </motion.div>
     );
 }

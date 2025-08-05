@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Button from "../button";
 import Title from "../title";
 
@@ -14,7 +16,14 @@ export default function Business() {
         },
     ]
     return (
-        <div id='bisniskami' className="bg-[#c3c9ca] skl-container py-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect">
+        <motion.div 
+            id='bisniskami' 
+            className="bg-[#c3c9ca] skl-container py-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}    
+            viewport={{ once: true, amount: 0.3 }}
+        >
             <div className='justify-center flex flex-col w-full'>
                 <Title title="Bisnis Kami" custom="text-[#172b50] text-center"/>
                 <div className="flex md:flex-row flex-col md:text-center text-justify justify-center">
@@ -35,6 +44,6 @@ export default function Business() {
                     href="/bisnis-kami"
                 />
             </div>
-        </div>
+        </motion.div>
     );
 }
