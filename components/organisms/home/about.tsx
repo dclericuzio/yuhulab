@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Button from "../button";
 import Title from "../title";
@@ -25,7 +27,13 @@ const aboutImages = [
 
 export default function About() {
     return (
-        <div className="skl-container py-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect">
+        <motion.div 
+            className="skl-container py-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+        >
             <div className='justify-center flex flex-col w-full'>
                 <div className="flex flex-row gap-[0.2rem] overflow-x-auto md:justify-center mb-[0.2rem] mt-[-0.3rem]">
                     {aboutImages.map((image, index) => (
@@ -48,6 +56,6 @@ export default function About() {
                 </div>
                 <Button title="See More" custom="bg-[#172b50]" href="/tentang-kami"/>
             </div>
-        </div>
+        </motion.div>
     );
 }

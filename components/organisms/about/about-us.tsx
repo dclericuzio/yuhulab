@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Title from "../title"
 
@@ -35,7 +37,13 @@ export default function AboutUs() {
     return (
         <div className="skl-container pb-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect">
             {/* profil */}
-            <div className='flex flex-col md:flex-row w-full md:gap-[1rem] mb-[0.1rem] md:mb-[0.7rem]'>
+            <motion.div 
+                className='flex flex-col md:flex-row w-full md:gap-[1rem] mb-[0.1rem] md:mb-[0.7rem]'
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}    
+                viewport={{ once: true, amount: 0.3 }}
+            >
                 <div className="flex flex-col md:w-2/3">
                     <Title title="Profil Perusahaan" custom=""/>
                     <div className="flex md:flex-row flex-col md:text-left text-justify mb-[0.1rem] md:mb-[0.2rem]">
@@ -52,10 +60,16 @@ export default function AboutUs() {
                     height={400}
                     className="h-[3rem] md:w-1/3 hidden md:block"
                 />
-            </div>
+            </motion.div>
 
             {/* visi misi */}
-            <div className='flex flex-col md:flex-row w-full items-center mb-[0.1rem] md:mb-[0.7rem]'>
+            <motion.div 
+                className='flex flex-col md:flex-row w-full items-center mb-[0.1rem] md:mb-[0.7rem]'
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}    
+                viewport={{ once: true, amount: 0.3 }}
+            >
                 <div className="flex flex-col">
                     <div className="md:w-2/3 flex flex-col">
                         <Title title="Visi, Misi, dan Nilai-Nilai Perusahaan" custom=""/>
@@ -88,10 +102,16 @@ export default function AboutUs() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Management */}
-            <div className='flex flex-col md:flex-row w-full items-center'>
+            <motion.div 
+                className='flex flex-col md:flex-row w-full items-center'
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}    
+                viewport={{ once: true, amount: 0.3 }}
+            >
                 <div className="flex flex-col">
                     <Title title="Manajemen Perusahaan" custom="text-left"/>
                     <div className="flex md:flex-row flex-col-reverse items-center  mb-[0.3rem] md:mb-[0.7rem]">
@@ -143,13 +163,19 @@ export default function AboutUs() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* License */}
-            <div className='flex flex-col md:flex-row w-full items-center'>
+            <motion.div 
+                className='flex flex-col md:flex-row w-full items-center'
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}    
+                viewport={{ once: true, amount: 0.3 }}
+            >
                 <div className="flex flex-col">
                     <Title title="Lisensi Perusahaan" custom=""/>
-                    <div className="flex md:flex-row flex-col-reverse items-center  mb-[0.3rem] md:mb-[0.7rem]">
+                    <div className="overflow-x-auto flex md:flex-row flex-col-reverse items-center  mb-[0.3rem] md:mb-[0.7rem]">
                         <div className="flex gap-[0.2rem]">
                             {licenseData.map((item, index)=> {
                                 return(
@@ -166,7 +192,7 @@ export default function AboutUs() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
         </div>
     );

@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Title from "../title";
 
@@ -23,7 +25,13 @@ export default function OutBusiness() {
     return (
         <div className="skl-container pb-[0.35rem] md:py-[0.7rem] px-[0.3rem] md:px-[0.7rem] animation-effect">
             {/* profil */}
-            <div className='flex flex-col md:flex-row w-full md:gap-[1rem] mb-[0.1rem] md:mb-[0.7rem]'>
+            <motion.div 
+                className='flex flex-col md:flex-row w-full md:gap-[1rem] mb-[0.1rem] md:mb-[0.7rem]'
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}    
+                viewport={{ once: true, amount: 0.3 }}
+            >
                 <div className="flex flex-col md:w-2/3">
                     <Title title="Gambaran Umum" custom=""/>
                     <div className="flex md:flex-row flex-col md:text-left text-justify mb-[0.1rem] md:mb-[0.2rem]">
@@ -42,10 +50,16 @@ export default function OutBusiness() {
                     height={400}
                     className="h-[3rem] md:w-1/3 hidden md:block"
                 />
-            </div>
+            </motion.div>
 
             {/* layanan */}
-            <div className='flex flex-col md:flex-row w-full items-center mb-[0.1rem] md:mb-[0.7rem]'>
+            <motion.div 
+                className='flex flex-col md:flex-row w-full items-center mb-[0.1rem] md:mb-[0.7rem]'
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}    
+                viewport={{ once: true, amount: 0.3 }}
+            >
                 <div className="flex flex-col w-full">
                     <div className="md:w-1/2 flex flex-col">
                         <Title title="Layanan Pelayaran Berstandar Tinggi" custom=""/>
@@ -59,10 +73,16 @@ export default function OutBusiness() {
                         ))}
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* armada */}
-            <div className='flex flex-col md:flex-row w-full items-center mb-[0.1rem] md:mb-[0.7rem]'>
+            <motion.div 
+                className='flex flex-col md:flex-row w-full items-center mb-[0.1rem] md:mb-[0.7rem]'
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}    
+                viewport={{ once: true, amount: 0.3 }}
+            >
                 <div className="flex flex-col w-full">
                     <Title title="Armada Operasional Kami" custom=""/>
                     <div className="flex flex-col md:flex-row w-full my-[0.1rem] md:my-[0.2rem] gap-[0.1rem] md:gap-[0.2rem] mb-[0.1rem] md:mb-[0.2rem]">
@@ -73,7 +93,7 @@ export default function OutBusiness() {
                         ))}
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
         </div>
     );
