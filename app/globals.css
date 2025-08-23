@@ -2,45 +2,50 @@
 
 html, body {
     box-sizing: border-box;
-    font-family: var(--font-noto-sans-grantha), system-ui, sans-serif;
+    font-family: var(--font-poppins), system-ui, sans-serif;
     scroll-behavior: smooth !important;
     font-size: clamp(12px, 6.94vw, 100px);
+    background: #FFF8EE
 }
 
 @layer components{
     .animation-effect{
         transition: all 0.3s ease;
     }
-    .skl-container{
+    .yuhu-container{
         max-width: 1550px;
         width: 100%;
         margin: 0 auto;
-        /* padding: 0 70px; */
         transition: padding 0.3s ease;
     }
-  
-    @keyframes scroll-left {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-110%);
-        }
-    }
+    @keyframes yuhu-sway {
+        0%   { transform: rotate(-6deg); }
+        50%  { transform: rotate(6deg);  }
+        100% { transform: rotate(-6deg); }
+      }
     
-    .scroll-left-animation {
-        animation: scroll-left 20s linear infinite;
+      /* slower, more relaxed */
+      @keyframes yuhu-sway-slow {
+        0%   { transform: rotate(-5deg); }
+        50%  { transform: rotate(5deg);  }
+        100% { transform: rotate(-5deg); }
+      }
+    
+      /* very subtle micro-sway */
+      @keyframes yuhu-sway-subtle {
+        0%   { transform: rotate(-2deg); }
+        50%  { transform: rotate(2deg);  }
+        100% { transform: rotate(-2deg); }
+      }
+    
+      /* Utility classes */
+      .sway {
+        animation: yuhu-sway 2s ease-in-out infinite;
+        transform-origin: 50% 60%; /* pivot slightly below center for natural feel */
         will-change: transform;
-    }
-
-    /* Custom Leaflet popup styles */
-    .custom-popup .leaflet-popup-content-wrapper {
-        font-size: 16px;
-        line-height: 1.4;
-    }
-    
-    .custom-popup .leaflet-popup-content {
-        font-size: 16px;
-        margin: 8px 12px;
-    }
+      }
   }
+
+@layer utilities {
+    .list-square { list-style-type: square; }
+}

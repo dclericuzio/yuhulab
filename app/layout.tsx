@@ -1,21 +1,20 @@
-import { Noto_Sans_Grantha } from "next/font/google";
+import { Poppins } from "next/font/google";
 import ClientWrapper from "@/utils/clientWrapper";
 import Navbar from "@/components/organisms/navbar";
+import WhatsAppButton from "@/components/organisms/whatsapp";
+import ScrollToTop from "@/components/organisms/scrollToTop";
 import "./globals.css";
-import 'leaflet/dist/leaflet.css'
-import Footer from "@/components/organisms/footer";
-import StatusMessageDisplay from "@/components/StatusMessageDisplay";
-import { StatusMessageProvider } from "@/components/StatusMessageContext";
 
-const notoSansGrantha = Noto_Sans_Grantha({
-  weight: "400",
-  variable: "--font-noto-sans-grantha",
-  subsets: ["latin"],
+const poppins = Poppins({
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700", "800"],
+    variable: "--font-poppins",
+    display: "swap",
 });
 
 export const metadata = {
-    title: "PT Rana Putra Solid",
-    description: "PT Rana Putra Solid",
+    title: "Yuhulab +",
+    description: "Yuhulab +",
 };
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
@@ -24,16 +23,14 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={`${notoSansGrantha.variable} antialiased`}>
+      <body className={`${poppins.variable} antialiased`}>
         <ClientWrapper/>
-        <StatusMessageProvider>
           <Navbar/>
-          <StatusMessageDisplay/>
           <main>
             {children}
           </main>
-          <Footer/>
-        </StatusMessageProvider>
+          <WhatsAppButton />
+          <ScrollToTop />
       </body>
     </html>
   );
