@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { GiChemicalDrop, GiBackpack, GiHand, GiFrenchFries } from "react-icons/gi";
 import { FaRegLightbulb, FaCocktail, FaLeaf, FaDumbbell } from "react-icons/fa";
+import { MdOutlineShoppingCart,MdOutlineSupportAgent } from "react-icons/md";
+import Link from 'next/link';
 
 export default function Hero() {
     const statement = [
@@ -31,6 +33,12 @@ export default function Hero() {
         { Icon: GiFrenchFries, label: "Heavy meals" },
         { Icon: FaLeaf, label: "Wellness boost" },
         { Icon: FaDumbbell, label: "Post-workout" },
+    ];
+
+    const ecomm = [
+        { src: "/assets/tokped.png", alt: "tokped", href:"/" },
+        { src: "/assets/shopee.png", alt: "shopee",href:"/" },
+        { src: "/assets/tiktok.png", alt: "tiktok",href:"/" },
     ];
 
     return (
@@ -161,6 +169,53 @@ export default function Hero() {
                         </ul>
                         <span className="text-[0.2rem] md:text-[0.4rem]"><span className='border-b-[0.05rem] border-[#F58359] font-bold'>YUHU</span> is here to <span className='border-b-[0.05rem] border-[#51C0AA] font-bold'>HELP</span>.</span>
                     </div>
+                </div>
+
+                {/* shop */}
+                <div id='ingredients' className="flex flex-col items-center justify-evenly mx-[0.25rem] md:mx-0 py-[0.35rem] md:py-[0.7rem]">
+                    <div className="flex items-center text-[#51C0AA]">
+                        <span className='font-bold text-[0.28rem] md:text-[0.65rem]'>YUHU Official Store</span> 
+                        <MdOutlineShoppingCart className='text-[0.28rem] md:text-[0.65rem] sway'/>
+                    </div>
+                    <div className='grid grid-cols-3 md:grid-cols-3 gap-[0.1rem]'>
+                        {ecomm.map((logo) => (
+                            <Link href={logo.href} key={logo.src}>
+                                <div className='flex flex-col'>
+                                    <Image
+                                        src={logo.src}
+                                        alt={logo.alt}
+                                        width={320}
+                                        height={60}
+                                        className="animation-effect w-[0.8rem] md:w-[3.5rem] cursor-pointer sway"
+                                    />
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                {/* agen */}
+                <div id='ingredients' className="flex flex-col items-center justify-evenly mx-[0.25rem] md:mx-0 py-[0.35rem] md:py-[0.7rem]">
+                    <div className="flex items-center text-[#F58359]">
+                        <span className='font-bold text-[0.28rem] md:text-[0.65rem]'>YUHU Official Agent</span> 
+                        <MdOutlineSupportAgent className='text-[0.28rem] md:text-[0.65rem] sway'/>
+                    </div>
+                    <span className='text-[0.15rem] md:text-[0.3rem] mt-[1rem]'>Coming soon...</span>
+                    {/* <div className='grid grid-cols-3 md:grid-cols-3 gap-[0.1rem]'>
+                        {ecomm.map((logo) => (
+                            <Link href={logo.href} key={logo.src}>
+                                <div className='flex flex-col'>
+                                    <Image
+                                        src={logo.src}
+                                        alt={logo.alt}
+                                        width={320}
+                                        height={60}
+                                        className="animation-effect w-[0.8rem] md:w-[3.5rem] cursor-pointer sway"
+                                    />
+                                </div>
+                            </Link>
+                        ))}
+                    </div> */}
                 </div>
                 
             </div>
