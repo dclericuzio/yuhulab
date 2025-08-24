@@ -200,7 +200,14 @@ export default function Hero() {
                         <span className='font-bold text-[0.28rem] md:text-[0.65rem]'>YUHU Official Agent</span> 
                         <MdOutlineSupportAgent className='text-[0.28rem] md:text-[0.65rem] sway'/>
                     </div>
-                    <span className='text-[0.15rem] md:text-[0.3rem] mt-[1rem]'>Coming soon...</span>
+                    <span className='text-[0.15rem] md:text-[0.3rem] mt-[1rem]'>
+                        Coming soon
+                        <span className="dots ml-1" aria-hidden="true">
+                            <span className="dot">.</span>
+                            <span className="dot">.</span>
+                            <span className="dot">.</span>
+                        </span>
+                    </span>
                     {/* <div className='grid grid-cols-3 md:grid-cols-3 gap-[0.1rem]'>
                         {ecomm.map((logo) => (
                             <Link href={logo.href} key={logo.src}>
