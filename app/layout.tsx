@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import ClientWrapper from "@/utils/clientWrapper";
 import Navbar from "@/components/organisms/navbar";
+import Footer from "@/components/organisms/footer";
 import WhatsAppButton from "@/components/organisms/whatsapp";
 import ScrollToTop from "@/components/organisms/scrollToTop";
 import "./globals.css";
@@ -31,6 +32,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
           </main>
           <WhatsAppButton />
           <ScrollToTop />
+          <Footer/>
       </body>
     </html>
   );

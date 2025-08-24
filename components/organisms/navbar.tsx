@@ -25,13 +25,15 @@ export default function Navbar() {
                         </li>
                     ))}
                 </ul>
-                <Image
-                    src="/assets/logo-green.png"
-                    alt="Logo"
-                    width={320}
-                    height={60}
-                    className="animation-effect w-[1.3rem] md:w-[2.3rem]"
-                />
+                <Link href="#statement">
+                    <Image
+                        src="/assets/logo-green.png"
+                        alt="Logo"
+                        width={320}
+                        height={60}
+                        className="animation-effect w-[1.3rem] md:w-[2.3rem]"
+                    />
+                </Link>
                 <ul className='hidden md:flex items-center text-[0.3rem] gap-[0.8rem]'>
                     {rightLinks.map((l) => (
                         <li key={l.href}>

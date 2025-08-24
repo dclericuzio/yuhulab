@@ -11,13 +11,11 @@ const bodoni = Bodoni_Moda({
 });
 
 export default function Hero() {
-    const ingredients = [
-        "L-Theanine",
-        "L-Arginin",
-        "Turmeric",
-        "Glutathionine",
-        "Goji berry",
-        "Essentials Vitamin",
+    const statement = [
+        "Feeling hungover ?",
+        "Feeling tired ?",
+        "Overworking your body ?",
+        "Feeling dehydrated ?"
     ];
     const cards = [
         {
@@ -50,9 +48,8 @@ export default function Hero() {
                 {/* Small Jelly, Big impact. */}
                 <div className="flex md:flex-row flex-col items-center justify-evenly gap-[0.1rem] md:gap-0">
                     <div className='flex flex-col mx-[0.31rem] md:mx-0'>
-                        <span className="text-[0.2rem] md:text-[0.4rem]">Small Jelly, Big impact.</span>
                         <span className={`${bodoni.className} text-[0.325rem] md:text-[0.65rem] font-bold text-[#51C0AA]`}>RCVR.</span>
-                        <span className="text-[0.2rem] md:text-[0.4rem]">Recover <span className='border-b-[0.05rem] border-[#F58359] font-bold'>FASTER</span>. Live <span className='border-b-[0.05rem] border-[#51C0AA] font-bold'>BETTER</span>.</span>
+                        <span className="text-[0.2rem] md:text-[0.4rem]">Small <span className='border-b-[0.05rem] border-[#F58359] font-bold'>Jelly</span>, Big <span className='border-b-[0.05rem] border-[#51C0AA] font-bold'>impact</span>.</span>
                         <div className='flex flex-col mt-[0.15rem] md:mt-[0.35rem] md:w-[6rem]'>
                             <span className="text-[0.12rem] md:text-[0.2rem]">YUHU isn&rsquo;t just a product — your everyday wellness companion to RCVR, recharge, and flow.</span>
                             <span className="text-[0.12rem] md:text-[0.2rem] font-bold">#YUHUForYou</span>
@@ -63,30 +60,23 @@ export default function Hero() {
                         alt="product-1"
                         width={320}
                         height={60}
-                        className="animation-effect md:w-[5rem] rounded-sm"
+                        className="animation-effect md:w-[5rem]"
                     />
                 </div>
 
                 {/* ingredients */}
-                <div id='ingredients' className="flex md:flex-row flex-col-reverse items-center justify-evenly mx-[0.25rem] md:mx-0 py-[0.35rem] md:py-[0.7rem] gap-[0.1rem] md:gap-0">
+                <div id='ingredients' className="flex flex-col items-center justify-evenly mx-[0.25rem] md:mx-0 py-[0.35rem] md:py-[0.7rem]">
+                    <div className="flex items-center text-[#F58359]">
+                        <span className='font-bold text-[0.28rem] md:text-[0.65rem]'>What&rsquo;s Inside RCVR.</span> 
+                        <GiChemicalDrop className='text-[0.28rem] md:text-[0.65rem] sway'/>
+                    </div>
                     <Image
-                        src="/assets/product-2.jpg"
+                        src="/assets/product-5.png"
                         alt="product-2"
                         width={320}
                         height={60}
-                        className="animation-effect md:w-[3.5rem] rounded-sm"
+                        className="animation-effect md:w-[5.5rem] mt-[-0.5rem] md:mt-0"
                     />
-                    <div className='flex flex-col'>
-                        <div className="flex items-center text-[#F58359]">
-                            <span className='font-bold text-[0.28rem] md:text-[0.65rem]'>What&rsquo;s Inside RCVR.</span> 
-                            <GiChemicalDrop className='text-[0.28rem] md:text-[0.65rem] sway'/>
-                        </div>
-                        <ul className='text-[0.15rem] md:text-[0.3rem] list-square list-inside'>
-                            {ingredients.map((ing) => (
-                            <li key={ing}>{ing}</li>
-                            ))}
-                        </ul>
-                    </div>
                 </div>
 
                 {/* why */}
@@ -137,11 +127,11 @@ export default function Hero() {
                 {/* RCVR. */}
                 <div id='rcvr' className="flex md:flex-row flex-col-reverse items-center justify-center mx-[0.31rem] md:mx-0 gap-[0.1rem] md:gap-[0.5rem] py-[0.35rem] md:py-[0.7rem]">
                     <Image
-                        src="/assets/product-3.png"
-                        alt="product-3"
+                        src="/assets/product-2.jpg"
+                        alt="product-2"
                         width={320}
                         height={60}
-                        className="animation-effect w-[1.5rem] md:w-[2rem]"
+                        className="animation-effect md:w-[3.5rem]"
                     />
                     <div className='flex flex-col md:w-1/2'>
                         <span className={`${bodoni.className} text-[0.325rem] md:text-[0.65rem] font-bold text-[#51C0AA]`}>RCVR.</span> 
@@ -159,6 +149,25 @@ export default function Hero() {
                                 ))}
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {/* statement */}
+                <div id='statement' className="flex md:flex-row flex-col-reverse items-center justify-center mx-[0.31rem] md:mx-0 gap-[0.1rem] md:gap-[0.5rem] py-[0.35rem] md:py-[0.7rem]">
+                    <Image
+                        src="/assets/product-bg.png"
+                        alt="product-2"
+                        width={320}
+                        height={60}
+                        className="animation-effect md:w-[3.5rem]"
+                    />
+                    <div className='flex flex-col md:w-1/2'>
+                        <ul className='text-[0.15rem] md:text-[0.3rem] list-square list-inside'>
+                            {statement.map((s) => (
+                            <li key={s}>{s}</li>
+                            ))}
+                        </ul>
+                        <span className="text-[0.2rem] md:text-[0.4rem]"><span className='border-b-[0.05rem] border-[#F58359] font-bold'>YUHU</span> is here to <span className='border-b-[0.05rem] border-[#51C0AA] font-bold'>HELP</span>.</span>
                     </div>
                 </div>
                 
