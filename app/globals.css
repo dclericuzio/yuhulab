@@ -10,7 +10,7 @@ html, body {
 
 @font-face {
   font-family: "Recoleta";
-  src: url("/fonts/Recoleta-bold.ttf") format("opentype");
+  src: url("/fonts/Recoleta-bold.woff2") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
