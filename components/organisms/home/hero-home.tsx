@@ -2,14 +2,6 @@ import Image from 'next/image';
 import { GiChemicalDrop, GiBackpack, GiHand, GiFrenchFries } from "react-icons/gi";
 import { FaRegLightbulb, FaCocktail, FaLeaf, FaDumbbell } from "react-icons/fa";
 
-import { Bodoni_Moda } from "next/font/google";
-
-const bodoni = Bodoni_Moda({
-  subsets: ["latin"],
-  weight: ["700", "900"], // choose weights that match your logo look
-  display: "swap",
-});
-
 export default function Hero() {
     const statement = [
         "Feeling hungover ?",
@@ -48,7 +40,7 @@ export default function Hero() {
                 {/* Small Jelly, Big impact. */}
                 <div className="flex md:flex-row flex-col items-center justify-evenly gap-[0.1rem] md:gap-0">
                     <div className='flex flex-col mx-[0.31rem] md:mx-0'>
-                        <span className={`${bodoni.className} text-[0.325rem] md:text-[0.65rem] font-bold text-[#51C0AA]`}>RCVR.</span>
+                        <span className="font-recoleta text-[0.325rem] md:text-[0.65rem] text-[#51C0AA]">RCVR.</span>
                         <span className="text-[0.2rem] md:text-[0.4rem]">Small <span className='border-b-[0.05rem] border-[#F58359] font-bold'>Jelly</span>, Big <span className='border-b-[0.05rem] border-[#51C0AA] font-bold'>impact</span>.</span>
                         <div className='flex flex-col mt-[0.15rem] md:mt-[0.35rem] md:w-[6rem]'>
                             <span className="text-[0.12rem] md:text-[0.2rem]">YUHU isn&rsquo;t just a product — your everyday wellness companion to RCVR, recharge, and flow.</span>
@@ -134,7 +126,7 @@ export default function Hero() {
                         className="animation-effect md:w-[3.5rem]"
                     />
                     <div className='flex flex-col md:w-1/2'>
-                        <span className={`${bodoni.className} text-[0.325rem] md:text-[0.65rem] font-bold text-[#51C0AA]`}>RCVR.</span> 
+                        <span className="font-recoleta text-[0.325rem] md:text-[0.65rem] text-[#51C0AA]">RCVR.</span> 
                         <span className='text-[0.12rem] md:text-[0.2rem]'>RCVR. is our first functional jelly — designed to help you recover, recharge, and feel better faster. Peach-flavored, single-serve sticks make wellness portable and effortless: tear, squeeze, go.</span> 
                         <div className='flex md:flex-row flex-col items-center mt-[0.15rem] md:mt-[0.3rem]'>
                             <span className='text-[0.12rem] md:text-[0.2rem] whitespace-nowrap mr-auto md:mr-0'>Perfect for :</span> 

@@ -8,6 +8,15 @@ html, body {
     background: #FFF8EE
 }
 
+@font-face {
+  font-family: "Recoleta";
+  src: url("/fonts/Recoleta-bold.ttf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+.font-recoleta { font-family: "Recoleta", system-ui, sans-serif; }
+
 @layer components{
     .animation-effect{
         transition: all 0.3s ease;
