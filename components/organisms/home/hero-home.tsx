@@ -36,9 +36,9 @@ export default function Hero() {
     ];
 
     const ecomm = [
-        { src: "/assets/tokped.png", alt: "tokped", href:"/" },
-        { src: "/assets/shopee.png", alt: "shopee",href:"/" },
-        { src: "/assets/tiktok.png", alt: "tiktok",href:"/" },
+        { src: "/assets/tokped.png", alt: "tokped", href:"https://tk.tokopedia.com/ZSAxnPqwY/" },
+        { src: "/assets/shopee.png", alt: "shopee",href:"https://id.shp.ee/11mo7dY" },
+        { src: "/assets/tiktok.png", alt: "tiktok",href:"https://www.tiktok.com/@yuhu.lab?_t=ZS-8zHCrmCyvrd&_r=1" },
     ];
 
     return (
@@ -179,7 +179,7 @@ export default function Hero() {
                     </div>
                     <div className='grid grid-cols-3 md:grid-cols-3 gap-[0.1rem]'>
                         {ecomm.map((logo) => (
-                            <Link href={logo.href} key={logo.src}>
+                            <Link href={logo.href} key={logo.src} target="_blank" rel="noopener noreferrer">
                                 <div className='flex flex-col'>
                                     <Image
                                         src={logo.src}
@@ -208,21 +208,6 @@ export default function Hero() {
                             <span className="dot">.</span>
                         </span>
                     </span>
-                    {/* <div className='grid grid-cols-3 md:grid-cols-3 gap-[0.1rem]'>
-                        {ecomm.map((logo) => (
-                            <Link href={logo.href} key={logo.src}>
-                                <div className='flex flex-col'>
-                                    <Image
-                                        src={logo.src}
-                                        alt={logo.alt}
-                                        width={320}
-                                        height={60}
-                                        className="animation-effect w-[0.8rem] md:w-[3.5rem] cursor-pointer sway"
-                                    />
-                                </div>
-                            </Link>
-                        ))}
-                    </div> */}
                 </div>
                 
             </div>
