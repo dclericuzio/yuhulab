@@ -36,9 +36,21 @@ export default function Hero() {
     ];
 
     const ecomm = [
-        { src: "/assets/tokped.png", alt: "tokped", href:"https://tk.tokopedia.com/ZSAxnPqwY/" },
-        { src: "/assets/shopee.png", alt: "shopee",href:"https://id.shp.ee/11mo7dY" },
-        { src: "/assets/tiktok.png", alt: "tiktok",href:"https://www.tiktok.com/@yuhu.lab?_t=ZS-8zHCrmCyvrd&_r=1" },
+        { 
+          src: "/assets/tokped.png", 
+          alt: "tokopedia", 
+          href: "https://www.tokopedia.com/yuhu-lab"
+        },
+        { 
+          src: "/assets/shopee.png", 
+          alt: "shopee", 
+          href: "https://shopee.co.id/yuhulab"
+        },
+        { 
+          src: "/assets/tiktok.png", 
+          alt: "tiktok", 
+          href: "https://www.tiktok.com/@yuhu.lab"
+        },
     ];
 
     return (
